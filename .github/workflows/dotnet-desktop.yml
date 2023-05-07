@@ -84,7 +84,7 @@ jobs:
       - name: Download a single artifact
         uses: actions/download-artifact@v3
         with:
-          name: my-artifact
+          name: test-results
           path: "./TestResults/testresults.trx"
         if: ${{ always() }}
       
