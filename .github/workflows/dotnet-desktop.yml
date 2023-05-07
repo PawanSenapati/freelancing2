@@ -56,7 +56,7 @@ jobs:
 #         run: D:/a/freelancing2/freelancing2/WinAppDriver_baseDirectory/WinAppDriver.exe
         
       - name: Run tests
-        run: dotnet test "D:/a/freelancing2/freelancing2/bin/Debug/WebUITestAutomation.dll" --no-build --verbosity normal --logger "trx;LogFileName=testresults.trx"
+        run: dotnet test "D:\a\freelancing2\freelancing2\bin\Debug\UnitTestProject1.dll" --no-build --verbosity normal --logger "trx;LogFileName=testresults.trx"
         
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action/composite@v2
