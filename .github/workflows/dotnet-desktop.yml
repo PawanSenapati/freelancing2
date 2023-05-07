@@ -85,7 +85,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: test-results
-          path: "./TestResults/testresults.trx"
         if: ${{ always() }}
       
       - name: Publish Test Results
