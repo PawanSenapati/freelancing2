@@ -73,6 +73,12 @@ jobs:
         
       - name: Run tests
         run: dotnet test "D:\a\freelancing2\freelancing2\bin\Debug\UnitTestProject1.dll" --no-build --verbosity normal --logger "trx;LogFileName=testresults.trx"
+      
+      - name: Upload TRX result files
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: "./TestResults/testresults.trx"
         
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action/composite@v2
