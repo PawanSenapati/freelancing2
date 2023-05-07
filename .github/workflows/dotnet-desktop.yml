@@ -24,7 +24,12 @@ jobs:
       
       - name: Install Visual Studio Build Tools
         uses: microsoft/setup-msbuild@v1.0.2
-        
+      
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.5
+        with:
+          nuget-version: 5.x
+      
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
         with:
