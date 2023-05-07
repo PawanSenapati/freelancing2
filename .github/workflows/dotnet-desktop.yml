@@ -80,7 +80,14 @@ jobs:
           name: test-results
           path: "./TestResults/testresults.trx"
         if: ${{ always() }}
-        
+      
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: my-artifact
+          path: "./TestResults/testresults.trx"
+        if: ${{ always() }}
+      
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action/composite@v2
         if: always()
